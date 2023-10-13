@@ -1,0 +1,47 @@
+.backdrop__body-backdrop___1rvky {
+  position: fixed;
+  opacity: 0;
+  width: 100%;
+  left: 0;
+  top: 0 !important;
+  right: 0;
+  bottom: 0;
+  background-color: #363636;
+  z-index: 9999;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+@media (max-width: 480px) {
+  .backdrop__body-backdrop___1rvky {
+    z-index: 999;
+  }
+}
+.backdrop__body-backdrop___1rvky.active {
+  visibility: visible;
+  opacity: 0.5;
+}
+.block-cart .top-cart-content {
+  right: 0px;
+  top: 100%;
+  position: absolute;
+  background: #fff;
+  padding: 0;
+  line-height: normal;
+  text-align: left;
+  box-shadow: 0px 3px 25px 0px rgba(31, 38, 67, 0.1);
+  -o-box-shadow: 0px 3px 25px 0px rgba(31, 38, 67, 0.1);
+  -moz-box-shadow: 0px 3px 25px 0px rgba(31, 38, 67, 0.1);
+  -webkit-box-shadow: 0px 3px 25px 0px rgba(31, 38, 67, 0.1);
+  z-index: 10000;
+  display: none;
+  color: #000;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 5px;
+}
+@media (min-width: 1199px) {
+  .block-cart:hover .top-cart-content {
+    display: block;
+  }
+}
