@@ -1,6 +1,10 @@
-import { createStore } from 'redux';
-import dataReducer from './reducers';
+import { createStore, combineReducers } from 'redux';
+import { siteReducer } from './reducers';
 
-const store = createStore(dataReducer);
+const rootReducer = combineReducers({
+  site: siteReducer,
+});
+
+const store = createStore(rootReducer);
 
 export default store;
