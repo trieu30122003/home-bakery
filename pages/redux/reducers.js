@@ -3,8 +3,8 @@ const initialState = {
   site: null,
 };
 const banner2 = {
-  firt: dataSite.category.filter((item) => item.id === "c13"),
-  second: dataSite.category.filter((item) => item.id === "c14"),
+  firt: dataSite.category.filter((item) => item.id === 65),
+  second: dataSite.category.filter((item) => item.id === 66),
 };
 
 export function siteReducer(state = initialState, action) {
@@ -31,7 +31,7 @@ export function siteReducer(state = initialState, action) {
         banner: dataSite.banner,
       }
     case 'GET_CHINHSACH':
-      let chinhSachCopy = dataSite.category.filter((item) => item.id === "c1");
+      let chinhSachCopy = dataSite.category.filter((item) => item.id === 52);
       chinhSachCopy.forEach((about) => {
         dataSite.news.forEach((news) => {
           if (news.categoryId === about.id) {
@@ -59,7 +59,7 @@ export function siteReducer(state = initialState, action) {
         productNew: dataSite.products.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 10),
       }
     case 'GET_ALL':
-      let categoryCopy = dataSite.category.filter((item) => item.id === "c2");
+      let categoryCopy = dataSite.category.filter((item) => item.id === 53);
       categoryCopy.forEach((category) => {
         category.children.forEach((childCategory) => {
           if (!childCategory.children) {
@@ -77,7 +77,7 @@ export function siteReducer(state = initialState, action) {
           allBakery: categoryCopy,
         }
     case 'GET_ABOUT':
-      let aboutCopy = dataSite.category.filter((item) => item.id === "c7");
+      let aboutCopy = dataSite.category.filter((item) => item.id === 59);
       aboutCopy.forEach((about) => {
         dataSite.news.forEach((news) => {
           if (news.categoryId === about.id) {
@@ -90,7 +90,7 @@ export function siteReducer(state = initialState, action) {
         about: aboutCopy,
       }
     case 'GET_TINTUC':
-      let tinTucCopy = dataSite.category.filter((item) => item.id === "c8");
+      let tinTucCopy = dataSite.category.filter((item) => item.id === 60);
       tinTucCopy.forEach((about) => {
         dataSite.news.forEach((news) => {
           if (news.categoryId === about.id) {
@@ -103,7 +103,7 @@ export function siteReducer(state = initialState, action) {
         tinTuc: tinTucCopy,
       }
     case 'GET_DANHGIA':
-      let danhGiaCopy = dataSite.category.filter((item) => item.id === "c9");
+      let danhGiaCopy = dataSite.category.filter((item) => item.id === 61);
       danhGiaCopy.forEach((about) => {
         dataSite.news.forEach((news) => {
           if (news.categoryId === about.id) {
@@ -116,7 +116,7 @@ export function siteReducer(state = initialState, action) {
         danhGia: danhGiaCopy,
       }
     case 'GET_MAIL':
-      let mailCopy = dataSite.category.filter((item) => item.id === "c10");
+      let mailCopy = dataSite.category.filter((item) => item.id === 62);
       mailCopy.forEach((about) => {
         dataSite.news.forEach((news) => {
           if (news.categoryId === about.id) {
@@ -129,7 +129,7 @@ export function siteReducer(state = initialState, action) {
         mail: mailCopy,
       }
     case 'GET_IG':
-      let igCopy = dataSite.category.filter((item) => item.id === "c11");
+      let igCopy = dataSite.category.filter((item) => item.id === 63);
       igCopy.forEach((about) => {
         dataSite.news.forEach((news) => {
           if (news.categoryId === about.id) {
